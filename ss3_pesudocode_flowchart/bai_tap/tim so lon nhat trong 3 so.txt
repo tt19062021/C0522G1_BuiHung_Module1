@@ -1,0 +1,16 @@
+BEGIN
+ INPUT A,B,C		
+ IF  A>B AND A>C
+   DISPLAY" A"
+ ELSE 
+    IF B>C
+   	DISPLAY "B"
+    ELSE 
+	  DISPLAY "C"
+    END IF
+ END IF
+END
+ 
+	
+
+ 

@@ -1,0 +1,32 @@
+BEGIN
+ INPUT A,B,C
+ IF A=B AND B=C
+	DISPLAY -1
+ ELSE 
+    IF A>B AND B>C
+    	DISPLAY B
+    ELSE 
+        IF A>C AND C>B
+        	DISPLAY C
+        ELSE
+            IF A<C AND A>B
+            	DISPLAY A
+		ELSE
+	          	IF A=B AND A<C
+				DISPLAY A 
+			ELSE
+				IF A=C AND B>C
+					DISPLAY A OR C
+				ELSE
+					IF A=C AND A>B
+						DISPLAY B
+					END IF
+				END IF
+			END IF
+		END IF
+	END IF
+	END IF
+END IF
+END
+
+		

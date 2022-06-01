@@ -1,0 +1,13 @@
+BEGIN
+	INPUT N dayso a1,a2,..,an
+	MAX = a1, i=2
+ WHILE (i<N)
+ DO 
+	IF ai> MAX
+	MAX = ai
+	i = i+1
+	END IF
+ END DO
+DISPLAY MAX
+END
+ 
