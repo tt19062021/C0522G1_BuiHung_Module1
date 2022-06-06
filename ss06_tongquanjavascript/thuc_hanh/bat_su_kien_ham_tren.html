@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<select id="mySelect" onchange="do_something()"
+    <option value="xemay">xe may</option>
+    <option value="xedap">xe dap</option>
+    <option value="xe oto">xe oto</option>
+    <option value="xemuc">xe muc</option>
+</select>
+</body>
+</html>
+<script>
+    //C1//bat ham tren bang ONCHANGE phai khai bao tren html dinh nghia ham //onchange=""// de file.js bat thuoc tinh//
+    function do_something() {
+        var sectionElement=document.getElementById("mySelect").value;
+        alert(selectvalue);
+    }
+    //C2//bat ham tren bang .addEventlistener//
+    var sectionElement= document.getElementById("mySelect");
+    sectionElement.addEventListener("change",changeFunction);
+    function changeFunction() {                                     //ham function truyen vao 2 su kien//
+        var selectvalue=document.getElementById("mySelect").value;
+        alert(selectvalue);
+    }
+</script>

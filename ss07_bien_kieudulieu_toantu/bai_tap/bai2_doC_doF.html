@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Doi Nhiet Do</p>
+<table>
+    <tr>
+        <td>Nhap do C(Celcius):</td>
+        <td><input type="number" id="C"></td>
+    </tr>
+    <tr>
+        <td><button onclick="doC()">Chuyen do F</button></td>
+        <td><span id="text"></span></td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <td>Nhap do F(Fahrenheit):</td>
+        <td><input type="number" id="F"></td>
+    </tr>
+    <tr>
+        <td><button onclick="doF()">Chuyen do C</button></td>
+        <td><span id="text1"></span></td>
+    </tr>
+</table>
+<script>
+    function doC() {
+        let c= document.getElementById("C").value;
+        let f= (9/5)*c + 32;
+        document.getElementById("text").innerHTML=f;
+    }
+    function doF() {
+        let f= document.getElementById("F").value;
+        let c= 5/9*(f - 32);
+        document.getElementById("text1").innerHTML=c;
+    }
+</script>
+</body>
+</html>

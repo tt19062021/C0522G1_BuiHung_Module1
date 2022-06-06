@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>CACULATOR</p>
+    <input name="" id="nhapA">
+    <input name="" id="nhapB"><br>
+    <button onclick="cong()">Adition(+)</button>
+    <button onclick="tru()">Subtraction(-)</button>
+    <button onclick="nhan()">Mutiplication(/)</button>
+    <button onclick="chia()">Division(*)</button><br>
+    <p id="result"></p>
+<script>
+    function cong() {
+        let a=document.getElementById('nhapA').value;
+        let b=document.getElementById('nhapB').value;
+        let r =parseFloat(a)+parseFloat(b);
+        document.getElementById('result').innerHTML= "Result: " + r;
+
+    }
+    function tru() {
+        let a=document.getElementById('nhapA').value;
+        let b=document.getElementById('nhapB').value;
+        let r= a - b;
+        document.getElementById('result').innerHTML= "Result: " + r;
+
+    }
+    function nhan() {
+        let a=document.getElementById('nhapA').value;
+        let b=document.getElementById('nhapB').value;
+        let r= a*b;
+        document.getElementById('result').innerHTML= "Result: " + r;
+
+    }
+    function chia() {
+        let a=document.getElementById('nhapA').value;
+        let b=document.getElementById('nhapB').value;
+        let r= a/b;
+        document.getElementById('result').innerHTML= "Result: " + r;
+
+    }
+</script>
+
+</body>
+</html>

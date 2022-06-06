@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Dien Tich Hinh Tron</p>
+<table>
+    <tr>
+        <td>Nhap r(ban kinh):</td>
+        <td><input type="number" id="bankinh"></td>
+    </tr>
+    <tr>
+        <td><button onclick="R()">Dien Tich:</button></td> //dsasd//
+        <td><span id="text"></span></td>
+    </tr>
+    <tr>
+        <td><button onclick="C()">Chu vi:</button></td>
+        <td><span id="text1"></span></td>
+    </tr>
+</table>
+<script>
+    function R() {
+        let r=document.getElementById("bankinh").value;
+        let s= r * r * 3.14;
+        document.getElementById("text").innerHTML=s;
+    }
+    function C() {
+        let r=document.getElementById("bankinh").value;
+        let c= 2 * r * 3.14;
+        document.getElementById("text1").innerHTML=c;
+    }
+</script>
+
+</body>
+</html>
