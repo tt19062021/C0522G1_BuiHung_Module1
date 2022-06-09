@@ -2,9 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+   let login =prompt('enter');
+   let message = (login == 'emloyee')? 'hello':
+       (login == 'director')? 'greetings':
+           (login == '')? 'no login':'';
+   alert(message);
+</script>
 </body>
 </html>
