@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input id="month" type="number"  min="1" max="12">
+    <button id="result" onclick="resultDay()">Tinh so ngay trong thang</button>
+    <p id="dayNumber"></p>
+<script>
+    function resultDay() {
+        let month = document.getElementById('month').value;
+        switch (month) {
+            case '4':
+            case '6':
+            case '9':
+            case '11':
+                document.getElementById('dayNumber').innerHTML="so ngay trong thang la 30";
+                break;
+            case'2':
+                document.getElementById('dayNumber').innerHTML="so ngay trong thang la 28 hoac 29";
+                break;
+            case '1':
+            case '3':
+            case '5':
+            case '7':
+            case '8':
+            case '10':
+            case '12':
+                document.getElementById('dayNumber').innerHTML="so ngay trong thang la 31";
+                break;
+                default:
+                    document.getElementById('dayNumber').innerHTML=" nhap lai thang";
+        }
+    }
+</script>
+</body>
+</html>

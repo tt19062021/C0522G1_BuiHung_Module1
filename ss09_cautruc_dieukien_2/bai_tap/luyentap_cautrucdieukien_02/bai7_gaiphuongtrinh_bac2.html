@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a= prompt('Input A:');
+    let b=prompt('Input B:');
+    let c=prompt('Input C:');
+    let result= Math.pow(b, 2) - 4*a*c;
+    x1='';
+    x2='';
+    if (result > 0 && a != 0 ){
+        alert('Equation with two solution');
+       alert((-b+Math.sqrt(result))/(2*a));
+        alert((-b-Math.sqrt(result))/(2*a));
+    }else if ( result == 0){
+        alert("Equation with double solution")
+        alert(x1 = x2 =-b/2 * a);
+    }else {
+        alert('The The equation has no solution')
+    }
+
+</script>
+</body>
+</html>

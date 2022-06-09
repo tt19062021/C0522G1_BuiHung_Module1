@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numberA = parseInt(prompt("Nhập số tiền : "));
+    let rank1= numberA <= 5000000;
+    let rank2= numberA <= 10000000;
+    let rank3= numberA <= 18000000;
+    let rank4= numberA <= 32000000;
+    let rank5= numberA <= 52000000;
+    let rank6= numberA <= 80000000;
+    switch (true) {
+        case rank1:
+            alert(numberA * 0.1);
+            break;
+        case rank2:
+            alert(numberA * 0.15);
+            break;
+        case rank3:
+            alert(numberA * 0.2);
+            break;
+        case rank4:
+            alert(numberA * 0.25);
+            break;
+        case rank5:
+            alert(numberA * 0.3);
+            break;
+        case rank6:
+            alert(numberA * 0.35);
+            break;
+        default:
+            alert(numberA * 0.4);
+    }
+</script>
+</body>
+</html>

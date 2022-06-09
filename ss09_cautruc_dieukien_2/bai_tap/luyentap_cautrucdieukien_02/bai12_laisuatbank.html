@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>Số tiền ban đầu:</p>
+    <input id="money" type="number" name="">
+    <p>Lãi suất hàng năm(%):</p>
+    <input id="interest" type="number" name="">
+    <p>Số năm:</p>
+    <input id="year" type="number" name="">
+    <p>Số lần ghép lãi trong năm:</p>
+    <input id="add" type="number" name="">
+    <br>
+    <button type="button" onclick="interestRate()">Tính Lãi</button>
+    <p id="result"></p>
+<script>
+function interestRate() {
+    let P=document.getElementById('money').value;
+    let i=document.getElementById('interest').value;
+    let n=document.getElementById('year').value;
+    let m=document.getElementById('add').value;
+    let F= P* (Math.pow(1+i/100/m,(n*m)));
+    document.getElementById('result').innerHTML= F;
+}
+</script>
+</body>
+</html>
