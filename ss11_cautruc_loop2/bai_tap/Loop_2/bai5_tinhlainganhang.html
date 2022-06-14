@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let money = +prompt('nhap so tien ban dau: ');
+    let month = +prompt('nhap so thang: ');
+    let interest = +prompt('nhap lai xuat');
+    let result = 0;
+    for (let i = 1; i <= month; i++){
+        result += money * interest/100;
+        money += result;
+    } document.write('so tien lai sau ' + month + ' thang la ' + result);
+
+</script>
+</body>
+</html>

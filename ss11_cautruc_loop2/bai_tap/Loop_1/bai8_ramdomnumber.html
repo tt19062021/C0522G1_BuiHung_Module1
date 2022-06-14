@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let maxNumber = parseInt(prompt("Nhập vào số lớn nhất:"));
+    let minNumber = parseInt(prompt("Nhập vào số nhỏ nhất:"));
+    let ranNumber = Math.floor(Math.random() * (maxNumber - minNumber + 1))+ minNumber;
+    alert(ranNumber);
+    console.log(ranNumber);
+    let count = 0; //đếm lần chơi
+    let number;
+    do{
+        number = prompt("Nhập vào số bạn đoán:")
+        count ++;
+        if(count > 3){
+            alert("Bạn đã hết lần chơi");
+            break;
+        }else if(number > ranNumber){
+            alert("Số của bạn đoán lơn hơn");
+        }else if(number < ranNumber){
+            alert("số của bạn đoán nhỏ hơn");
+        }else {
+            alert("Chúc mừng bạn đoán đúng");
+        }
+    }while ( number !== ranNumber)
+</script>
+</body>
+</html>
