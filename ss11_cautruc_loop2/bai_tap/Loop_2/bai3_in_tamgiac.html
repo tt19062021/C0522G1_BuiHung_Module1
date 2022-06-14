@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Hinh 1</h1>
+<script>
+    for(let i =1; i <=5 ; i++){
+        for(let j=1 ; j <= i ; j++){
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+</script>
+    <h1>Hinh 2</h1>
+<script>
+    for(let i =1; i <=5 ; i++){
+        for(let j= 5 ; j>=i ; j--){
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+</script>
+    <h1>Hinh3</h1>
+<script>
+    let sout;
+    sout= "<table>"
+    for(i=1; i<= 5; i++){
+            sout= sout +"<tr>";
+        for(j=1;j <= 5; j++){
+            if(j <= 5 - i){
+                sout = sout +"<td>"+"</td>";
+            }else {
+                sout = sout + "<td>" +"*"+  "</td>";
+            }
+        }
+        sout= sout + "</tr>";
+    }
+    sout =sout +"</table>";
+    document.write(sout);
+</script>
+    <h1>Hinh 4</h1>
+<script>
+    let sout2;
+    sout2 = "<table>"
+    for(i = 1; i<= 5; i++){
+            sout2= sout2 +"<tr>";
+        for(j = 1;j <= 5; j++){
+            if(j < i){
+                sout2= sout2 +"<td>"+"</td>";
+            }else {
+                sout2= sout2 + "<td>" +"*"+  "</td>";
+            }
+        }
+        sout2= sout2 + "</tr>";
+    }
+    sout2 =sout2 +"</table>";
+    document.write(sout2);
+</script>
+</body>
+</html>
