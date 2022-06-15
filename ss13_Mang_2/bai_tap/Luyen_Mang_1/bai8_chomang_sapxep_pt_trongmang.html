@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let prime = [];
+    for (let i = 0; i < 10; i++) {
+        prime[i] = parseInt(prompt("Nhap vao phan tu N" + i));
+    }
+    alert("prime [" + prime + "]");
+    // prime.sort(function (a, b) {
+    //     return b-a; // tang a-b giam b-a
+    // })
+    // document.write(prime);
+    for (let i = 0; i < prime.length; i++) {
+        for (let j = 0; j <= i; j++) {
+            if (prime[i] > prime[j]) { //Giảm thì đổi dấu
+                let change = prime[i];
+                prime[i] = prime[j];
+                prime[j] = change;
+            }
+        }
+    }
+    document.write(prime);
+</script>
+</body>
+</html>

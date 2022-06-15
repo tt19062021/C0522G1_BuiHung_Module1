@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = prompt("nhập a");
+    let b = prompt("nhap b");
+    let count = 0;
+    if (a.length === b.length) {
+        for (let i = 0; i < a.length; i++) {
+            if (a[i] === b[i]) {
+                count++;
+            }
+        }
+        if (count === a.length) {
+            alert("This is the Same");
+        } else {
+            alert(" This is not the Same");
+        }
+    } else {
+        alert("This is not the Same!");
+    }
+</script>
+</body>
+</html>

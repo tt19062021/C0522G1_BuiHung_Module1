@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = "C05";
+    let number = 9.6;
+    let isExist = true;
+    // ==> mỗi biến chỉ lưu 1 giá trị
+
+    // 1 biến có thể lưu dc nhiều giá trị ?
+    let arr = ["C05", 9.6, true]; //cách 1
+    // document.writeln(arr.length);
+    // document.writeln(arr[9]);
+
+    let arr1 = new Array("C05", 9.6, true); //cach 2
+    let arr2 =  Array("C05", 9.6, true); //cach 3
+
+    /*
+    * Khai báo mảng số nguyên có các giá trị lần lượt là
+    * 15,8,16
+    * */
+    // let arrNumber = new Array(15,8,16);
+    let arrNumber = Array(15); //số lượng
+    document.writeln(arrNumber.length); //15
+    document.writeln(arrNumber[arrNumber.length - 1]); //U
+    let arr = ["C05", 9.6, true];
+    // document.writeln(arr[0]);
+    // document.writeln(arr[1]);
+    // document.writeln(arr[2]);
+
+    // cap nhat gia tri 9.6 thanh 10
+    arr[1] = 10;
+
+    for(let index = 0; index <arr.length; index++){
+        document.writeln(arr[index]);
+    }
+
+    /*for-in: Duyệt index - chỉ số của mảng*/
+    for(let index in arr){
+        document.write(index + "<br>");
+    }
+
+    /*for-of: Duyệt value - giá trị của mảng*/
+    for(let value of arr){
+        document.write(value + "<br>");
+    }
+    let arr1 = [6, 9, 11, 2, 20, 11];
+
+    /*Thêm 99 vào cuối mảng*/
+    // arr1.push(99);
+
+    /*Thêm 99 ở đầu mảng*/
+    // arr1.unshift(99);
+
+    /*Xóa phần tử cuối mảng*/
+    // arr1.pop();
+
+    /*Xóa phần tử ở đầu mảng*/
+    // arr1.shift();
+
+    /*Thêm tại vị trí bất kì*/
+    //6, 9, 99, 11, 2, 20
+    // arr1.splice(2,0,99);
+
+    //6, 9, 99, 100, 11, 2, 20
+    // arr1.splice(2,0,99,100);
+
+    /*Xóa tại vị trí bất kì*/
+    //6, 9, 11, 2, 20
+    //6, 11, 2, 20
+    // arr1.splice(1,1);
+
+    //6, 9, 20
+    // arr1.splice(2,2);
+    //xóa hết
+    // arr1.splice(0,arr1.length)
+
+    /*Chuyển mảng thành chuỗi*/
+    // let str = arr1.toString();
+    // let str1 = arr1.join("-");
+    // let str1 = arr1.join("");
+    // document.write(str1);
+
+    /*Hàm đảo mảng*/
+    // arr1.reverse();
+
+    /*Hàm tìm kiếm*/
+    //[6, 9, 11, 2, 20, 11]
+    let check = arr1.includes(111); //true/false
+    let index = arr1.indexOf(11);
+    /*
+    * Nếu x tồn tại trong mảng thì indexOf
+    * trả về index đầu tiên của X
+    * Nếu X không tồn tại thì trả về -1
+    *
+    * */
+    // document.write(check + "<br>")
+    // document.write(index)
+
+    for(let value of arr1){
+        document.write(value + "  ");
+    }
+
+    /*sắp xếp*/
+    arr1.sort(function (a, b) {
+        return b - a;
+    })
+
+    document.write("<br>")
+
+    for(let value of arr1){
+        document.write(value + "  ");
+    }
+
+    // arr1.forEach(function (value) {
+    //     document.write(value +2 + "<br>");
+    // })
+    /*Bài toán đếm số lần xuất hiện của từ trong chuỗi*/
+
+    let str = "ha noi mua thu ha noi thu";
+    let arr1 = str.split(" "); //mảng sau khi chuyển chuỗi thành mảng
+    let arr2 = new Array(0); //mảng chứa kí tự không trùng lặp
+    let arr3 = new Array(0); //mảng đếm số lần xuất hiện
+
+    for(let index = 0; index<arr1.length; index++){
+        let position  = arr2.indexOf(arr1[index]);
+
+        //nếu từ đó chưa tồn tại
+        if(position == -1){
+            arr2.push(arr1[index]); //thêm vào mảng 2
+            arr3.push(1); //đếm số lần xuất hiện là 1
+        } else {
+            //nếu mảng đã tồn tại thì đếm lên 1 đơn vị.
+            arr3[position] = arr3[position] + 1;
+        }
+    }
+
+    /*hiển thị kết quả*/
+    for(let index in arr2 ){
+        document.write(arr2[index] + " - " + arr3[index] + "<br>")
+    }
+    let arr = [1, 2, 3, 4, 5, 6, 7];
+
+    /*Nhập V*/
+    let v = parseInt(prompt("Input V: "));
+
+    // /*Tìm V có trong mảng không */
+    // let index = -1;
+    // for (let i = 0; i < arr.length; i++) {
+    //     if (v == arr[i]) {
+    //         index = i;
+    //     }
+    // }
+    // // document.write(index);
+    //
+    //
+    // if (index != -1) {
+    //     /*Xóa nếu v tồn tại*/
+    //     for (let i = index; i < arr.length - 1; i++) {
+    //         arr[i] = arr[i + 1];
+    //     }
+    //     //gán 0 cho phần tử cuối
+    //     arr[arr.length - 1] = 0;
+    //     document.write(arr)
+    // } else {
+    //     /*Ko có V trong mảng*/
+    //     alert("Not found: " + v);
+    // }
+
+    /*Cach 2*/
+    let index = arr.indexOf(v); //tìm kiếm
+    arr.splice(index,1); //xóa
+    arr.push(0); //thêm cuối
+    document.write(arr);
+
+    <script>
+    let a = [1,2,3];
+    let b = [4,5,6,9];
+    //b1 khai báo mảng c có kích thước = a + b
+    let c = new Array(a.length + b.length);
+
+    //b2 copy giá trị từ a sang c
+    for(let i = 0; i < a.length; i++){
+        c[i] = a[i];
+    }
+
+    //b3 copy giá trị từ b sang c
+    for(let j = 0; j < b.length; j++){
+        c[a.length + j] = b[j];
+        //c[3] = b[0]
+        //c[4] = b[1]
+        //c[5] = b[2]
+        //c[6] = b[3]
+    }
+    document.write(c);
+
+    //cach 2
+    let c = a.concat(b); //hàm nối mảng
+    document.write(c);
+</script>
+</body>
+</html>

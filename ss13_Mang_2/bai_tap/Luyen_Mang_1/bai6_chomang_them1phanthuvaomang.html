@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let prime = [];
+    for (let i = 0; i < 10; i++) {
+        prime[i] = parseInt(prompt("Nhập vào số nguyên N " + i));
+    }
+    // let number = parseInt(prompt("Nhập số bất kỳ:"));
+    // let index = prime.indexOf(number);
+    // document.write(index);
+    alert("prime [" + prime + "]");
+    let number = parseInt(prompt("Nhập số bất kỳ:"));
+    let index =-1;
+    for (let i = 0; i < prime.length; i++) {
+        if (number === prime[i]) {
+           index = i;
+        }
+    }
+    document.write("Số "+ number +" nhập vào có trong mảng nằm ở vị trí " + index);
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let prime = [parseInt(prompt("Nhap vao so N1"))];
+    let sum = prime[0];
+    let max = prime[0];
+    let index = 0;
+    for (let i = 1; i < 10; i++) {
+        prime[i] = parseInt(prompt("Nhập vào số nguyên N" + i))
+        if (prime[i] > max) {
+            max = prime[i];
+            sum += prime[i] // vị trí trong mảng
+        }
+    }
+    alert("prime [" + prime + "]");
+    document.write("Max là " + max + " giá trị trung bình của mảng " + sum / prime.length);
+</script>
+</body>
+</html>

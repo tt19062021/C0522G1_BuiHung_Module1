@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let str = prompt("Input character Englisht to Vietnamese:");
+    let arrEng = ["banana", "apple", "orange", "pen", "pencil", "book"];
+    let arrVie = ["chuối", "táo", "cam", "bút", "bút chì", "sách"];
+    let result ="";
+    for( let i = 0; i< arrEng.length ; i++){
+        if( str === arrEng[i]){
+           for( let j = 0; j < arrVie.length ; j++){
+               if(i === j){
+                   result = arrVie[j];
+               }
+           }
+        }
+        alert(result);
+    }
+</script>
+</body>
+</html>

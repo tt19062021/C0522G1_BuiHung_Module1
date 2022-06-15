@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let negative = [];
+    let index = negative[0];
+    let count = 0;
+    for (let i = 0; i < 10; i++) {
+        negative[i] = parseInt(prompt("Nhập vào số Nguyên N" + i));
+        if (negative[i] < 0) {
+            count++;
+        }
+    }
+    alert("negative = [" + negative + "]");
+    document.write("Có " + count + " số là số âm" + index);
+</script>
+</body>
+</html>

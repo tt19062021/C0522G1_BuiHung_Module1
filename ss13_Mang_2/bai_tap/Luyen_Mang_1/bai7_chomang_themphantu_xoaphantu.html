@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let prime = [];
+    for (let i = 0; i < 10; i++) {
+        prime[i] = parseInt(prompt("Nhập vào số nguyên N " + i));
+    }
+    // let number = parseInt(prompt("Nhập số bất kỳ:"));
+    // let index = prime.indexOf(number);
+    // prime.splice(index,1);  //xóa
+    // prime.push(0);          //thêm cuối
+    // document.write(index);
+    alert("prime [" + prime + "]");
+    let number = parseInt(prompt("Nhập số bất kỳ:"));
+    let index = -1;
+    for (let i = 0; i < prime.length; i++) {
+        if (number === prime[i]) {
+            index = i;
+        }
+    }
+    document.write("Số " + number + " nhập vào có trong mảng nằm ở vị trí " + index );
+    if (index !== -1) {
+        /*Xóa nếu number tồn tại*/
+        for (let i = index; i < prime.length - 1; i++) {
+            prime[i] = prime[i + 1];
+        }
+        //gán 0 cho phần tử cuối
+        prime[prime.length - 1] = 0;
+        document.write(" thay đổi chuoi prime = [" + prime + "]");
+    } else {
+        /*Ko có number trong mảng*/
+        alert("Not found: " + number);
+    }
+</script>
+</body>
+</html>

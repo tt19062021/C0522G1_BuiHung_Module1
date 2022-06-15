@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    for (let i = 0; i < 5; i++) {
+        arr[i] = prompt("Nhập vào số từ trong chuổi N" + i);
+    }
+    alert("arr =[" + arr + "]");
+    let count = 0;
+    arr= arr+ " ";
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i-1] !== "," && arr[i]=== ",") {
+            count++;
+        }
+    }
+    document.write("Số từ trong chuổi arr=[" + arr + "]" + "là :" + count);
+</script>
+</body>
+</html>
