@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số nhỏ nhất trong 3 số</title>
+</head>
+<body>
+<script>
+    function findMinNumber(num1, num2, num3) {
+        if (num1 <= num2 && num1 <= num3) {
+            return num1;
+        } else if (num2 <= num3) {
+            return num2;
+        } else {
+            return num3;
+        }
+    }
+
+    let num1 = parseInt(prompt("Input number 1:"));
+    let num2 = parseInt(prompt("Input number 2:"));
+    let num3 = parseInt(prompt("Input number 3:"));
+    alert(findMinNumber(num1, num2, num3));
+</script>
+</body>
+</html>

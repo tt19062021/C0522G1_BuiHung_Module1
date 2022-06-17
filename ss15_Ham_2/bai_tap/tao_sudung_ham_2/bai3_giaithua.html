@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function factorial(number) {
+        // let n =prompt("Nhập giai thừa số:");
+        let result = 1;
+        for (i = 1; i <= number; i++) {
+            result = number * i;
+        }
+        return result;
+
+    }
+
+    let number = prompt("Input your number");
+    alert(factorial(number));
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isArray(number) {
+        let index = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (number === array[i]) {
+                index++;
+            }
+        }
+        if (index === 0) {
+            return -1;
+        } else {
+            return index;
+        }
+    }
+
+    let array = ["a", "b", "c", "r", "g", "6"];
+    let number = prompt("nhap vao ");
+    alert(isArray(number));
+</script>
+</body>
+</html>

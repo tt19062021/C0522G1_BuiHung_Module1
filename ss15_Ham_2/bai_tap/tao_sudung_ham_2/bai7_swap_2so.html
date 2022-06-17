@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function iSwitch(array) {
+        let result = array[0];
+        array[0] = array[1];
+        array[1] = result;
+        return array;
+    }
+
+    let numA = prompt("Input A:");
+    let numB = prompt("Input B:");
+    let array =[numA, numB];
+    alert(iSwitch(array));
+</script>
+</body>
+</html>

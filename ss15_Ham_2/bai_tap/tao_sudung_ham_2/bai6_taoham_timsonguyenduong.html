@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkPositiveInteger(number) {
+        if (number % 1 === 0 && number > 0) {
+            return "Your number is Positive Integer";
+        } else {
+            return "This is not positive interger";
+        }
+    }
+
+    let num = parseFloat(prompt("Input your number:"));
+    alert(checkPositiveInteger(num));
+</script>
+</body>
+</html>

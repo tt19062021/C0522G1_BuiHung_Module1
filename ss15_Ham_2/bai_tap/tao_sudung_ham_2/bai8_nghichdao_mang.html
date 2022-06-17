@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function iSwap(array) {
+        let first = 0;
+        let last = array.length - 1;
+        for (let i = 0; i < array.length; i++) {
+            if (last > first) {
+                let newA = array[first];
+                array[first] = array[last];
+                array[last] = newA;
+                first++;
+                last--;
+            }
+        }
+        return array;
+    }
+
+    let array = [8, 9, 10, 11, 12, 13, 14, 15];
+    alert(iSwap(array));
+</script>
+</body>
+</html>

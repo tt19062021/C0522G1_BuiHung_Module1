@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //5k
+    let childStar = ["Polaris","Aldebaran","Deneb","Vega","Altair","Dubhe","Regulus"];
+    let momStrar = ["Ursa Minor","Tarurus","Cygnus","lyra","Aquila","Ursa Major","Leo"];
+    function findStar(nameStar) {
+        let index =0;
+        for( let i = 0; i< childStar.length ; i++){
+            if( nameStar === childStar[i]){
+                document.write(childStar[i]+ " is son of " + momStrar[i]);
+                index ++;
+            }
+        }
+        if(index === 0){
+            document.write("Not found mother star");
+        }
+    }
+    let nameStar= prompt("In put star name");
+    findStar(nameStar);
+</script>
+</body>
+</html>

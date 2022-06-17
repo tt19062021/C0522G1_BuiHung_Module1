@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function yesOrNo(answer) {
+        let result = "";
+        if(answer){
+            result = "Let's we play the game";
+        }else {
+            result = "No,I don't like play game with you.";
+        }
+        return result;
+    }
+        let confirAnswer = confirm("Will we play a game");
+        let theAnswer = yesOrNo(confirAnswer);
+        alert(theAnswer);
+
+</script>
+</body>
+</html>

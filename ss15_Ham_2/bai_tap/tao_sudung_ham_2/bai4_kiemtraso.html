@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function testNum(number) {
+        if (parseFloat(number) % parseFloat(number) === 0 || number === 0) {
+            return "Yes,This is a number";
+        } else {
+            return "No";
+        }
+    }
+
+    let test = prompt("In put everything :");
+    alert(testNum(test));
+</script>
+</body>
+</html>
