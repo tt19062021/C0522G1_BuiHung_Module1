@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="canvasRec" height="1000px" width="1000px" style="border:1px blue"></canvas>
+<script>
+    class Rectangle {
+        constructor(hight, weight) {
+            this.hight = hight;
+            this.weight = weight;
+
+        }
+
+        getHight() {
+            return this.hight;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        getArea() {
+            return this.weight * this.hight;
+        }
+
+        getPerimeter() {
+            return (this.hight + this.weight) * 2;
+        }
+
+        setHight(newHight) {
+            this.hight = newHight;
+        }
+
+        setWeight(newWeight) {
+            this.weight = newWeight;
+        }
+
+        rectanggle() {
+            let ctx = document.getElementById("canvasRec").getContext("2d");
+            ctx.fillStyle = "#FF0000";
+            ctx.fillRect(0, 0, rectangle.getHight(), rectangle.getWeight());
+        }
+    }
+
+    let rectangle = new Rectangle(20, 10);
+
+    rectangle.setHight(50);//thay doi gia tri
+    rectangle.setWeight(20);// thay doi gia tri
+    rectangle.rectanggle();
+    alert("chu vi:" + rectangle.getPerimeter() + "dien tich:" + rectangle.getArea());
+</script>
+</body>
+</html>
