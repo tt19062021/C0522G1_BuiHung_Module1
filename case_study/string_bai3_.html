@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function findDifferentOfTowString(string1,string2) {
+        let index = 0;
+        for (let i = 0; i < string1.length; i++) {
+            // let index =0;
+            for (let j = 0; j < string2.length; j++) {
+                if (string1[i] === string2[j]) {
+                    index++;
+                }
+            }
+        }
+        return index;
+    }
+
+    let string1 = prompt("nhap chuoi");
+    let string2 = prompt("nhap chuoi");
+    document.write("string1:"+string1+"<br>"+"string2:"+string2+"<br>");
+    document.write(findDifferentOfTowString(string1, string2));
+</script>
+</body>
+</html>

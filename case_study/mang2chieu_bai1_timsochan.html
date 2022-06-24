@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // var sout="<table border=2>";
+    // for (var y=0; y<arr2D.length; y++ ) { // for each row
+    //     sOut += "<tr>";
+    //     for (var x=0; x<arr2D[y].length; x++ ) { // for each clm
+    //         sOut += "<td>" + arr2D[y][x] + "</td>";
+    //     }
+    //     sout += "</tr>";
+    // }
+    // sout += "</table>";
+    let row = prompt("So hang:");
+    let col = prompt("So cot :");
+    let arr2D = [];
+    for (let i = 0; i < row; i++) {
+        document.write("[ ");
+        let array = [];
+        for (let j = 0; j < col; j++) {
+            array[j] = parseInt(prompt("Nhâp arr2D[" + i + "][" + j + "]"));
+            document.write(array[j] + " ");
+        }
+        arr2D[i] = array;
+        document.write(" ]" + "<br>");
+    }
+
+    function sumEvenNumber(array2d) {
+        let sum = 0;
+        for (let i = 0; i < array2d.length; i++) {
+            for (let j = 0; j < array2d[i].length; j++) {
+                if (array2d[i][j] % 2 === 0) {
+                    sum += array2d[i][j];
+                }
+            }
+        }
+        return sum;
+    }
+    document.write("Tổng các số chắn trong Ma trận là " + sumEvenNumber(arr2D));
+    // document.write("Ma trận: " + "<br>");
+    // let row = parseInt(prompt("Nhập số dòng: "));
+    // let col = parseInt(prompt("Nhập số cột: "));
+    // let matrix = [];
+    // for (let i=0; i<row; i++) {
+    //     document.write("[ ");
+    //     let array = [];
+    //     for (let j=0; j<col; j++) {
+    //         array[j] = parseInt(prompt("Nhập matrix[" + i + "][" + j + "]"));
+    //         document.write(array[j] + "  ");
+    //     }
+    //     matrix[i] = array;
+    //     document.write(" ]" + "<br>");
+    // }
+    // document.write("Tổng các số chắn trong Ma trận là " + sumEvenNumber(matrix));
+    //     function sumEvenNumber(array2d) {
+    //         let sum = 0;
+    //         for (let i = 0; i < array2d.length; i++) {
+    //             for (let j = 0; j < array2d[i].length; j++) {
+    //                 if (array2d[i][j] % 2 === 0) {
+    //                     sum += array2d[i][j];
+    //                 }
+    //             }
+    //         }
+    //         return sum;
+    //     }
+</script>
+</body>
+</html>

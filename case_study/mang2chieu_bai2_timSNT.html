@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>tìm số nguyên tố trong mảng 2 chiều</h1>
+<script>
+    let row = parseInt(prompt("So hang:"));
+    let col;// tùy biến só phần tử trong hàng
+    let arr2D = [];
+    for (let i = 0; i < row; i++) {
+        col= parseInt(prompt("so phan tu trong hang:"))//**
+        document.write("[ ");
+        let array = [];
+        for (let j = 0; j < col; j++) {
+            array[j] = parseInt(prompt("Nhâp arr2D[" + i + "][" + j + "]"));
+            document.write(array[j] + " ");
+        }
+        arr2D[i] = array;
+        document.write(" ]" + "<br>");
+    }
+    function isPrime(array) {
+        let arrPrime =[];
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array[i].length; j++) {
+                let count = 0;
+                for (let k = 1; k <= array[i][j]; k++) {
+                    if (array[i][j] % k === 0) {
+                        count++;
+                    }
+                }
+                if (count === 2) {
+                    arrPrime.push(array[i][j]);
+                }
+
+            }
+        }
+        return arrPrime;
+    }
+    document.write(isPrime(arr2D));
+</script>
+</body>
+</html>

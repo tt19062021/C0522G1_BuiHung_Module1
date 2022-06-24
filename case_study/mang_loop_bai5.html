@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let arr =["1", "Cafe" + "\n", "2", "Nước Cam" + "\n", "3", "Coca" + "\n", "4", "không mua"];
+    // //alert(arr.length);
+    // let number = prompt(arr);
+    // // let sl = parseInt(prompt("nhap vao so luong bạn mua"))
+    // if (number === arr[0]) {
+    //     let sl = parseInt(prompt("Quý khách mua mấy ly? "));
+    //     alert("Tổng cộng:" +sl +"ly là:"+ sl * 5000);
+    // } else if (number === arr[2]) {
+    //     let sl = parseInt(prompt("Quý khách mua mấy ly?"));
+    //     alert("Tổng cộng"+sl +"ly là:" + sl * 10000);
+    // } else if (number === arr[4]) {
+    //     let sl = parseInt(prompt("Quý khách mua mấy ly?"));
+    //     alert("Tổng cộng" +sl +"ly là:" + sl * 8000);
+    // } else {
+    //     alert("Cảm ơn quý khách\n"+"Mời quý khách chọn lại hoặc đi chổ khác mua nhé");
+    // }
+    let menu;
+    let count;
+    do{
+        menu = parseInt(prompt("1.Cafe\n 2.Nước Cam\n 3.Coca\n 4.RockStar\n 5.Đào\n 6.Không uống\n"));
+        switch (menu) {
+            case 1:
+            count = prompt("Nhập số lượng:");
+            alert("Cafe"+ "sl:"+ count +"giá:" + count * 5000);
+                break;
+            case 2:
+                count = prompt("Nhập số lượng:");
+                alert("Nước Cam"+ "sl"+ count +"giá:" + count * 10000);
+                break;
+            case 3:
+                count = prompt("Nhập số lượng:");
+                alert("Coca"+ "sl"+ count +"giá:" + count * 8000);
+                break;
+            case 4:
+                count = prompt("Nhập số lượng:");
+                alert("RockStar"+ "sl:"+ count +"giá:" + count * 15000);
+                break;
+            case 5:
+                count = prompt("Nhập số lượng:");
+                alert("Đào" + "Sl" + count + "giá:" + count * 300000);
+                break;
+            default:
+            alert("Cảm ơn quý khách:");
+        }
+        }while (menu !==6)
+</script>
+</body>
+</html>

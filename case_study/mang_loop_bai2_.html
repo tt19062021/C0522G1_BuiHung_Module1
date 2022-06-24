@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrA = [];
+    let lengthA = prompt("Input length arrA=[]");
+    for (let i = 0; i < lengthA; i++) {
+        arrA[i] = parseInt(prompt("Input value of arrA" + i));
+    }
+    let arrB = [];
+    let lengthB = prompt("Input length arrB=[]");
+    for (let i = 0; i < lengthB; i++) {
+        arrB[i] = parseInt(prompt("Input value of arrB" + i));
+    }
+    alert("arrA = [" + arrA + "]" );
+    alert("arrB = [" + arrB + "]");
+    let arrC = [];
+    for(let i = 0; i< arrB.length; i++){
+        // let count =0;
+        // for(let j= 0; j< arrA.length; j++){
+        //     if(arrB[i] === arrA[j]){
+        //         count++;
+        //     }
+        // }
+        if(!arrA.includes(arrB[i]) && !arrC.includes(arrB[i])){
+            arrC.push(arrB[i]);                         // xuat ra phần tử ko có trong mảng A
+        }
+    }
+    // document.write("arrC=["+ arrC +"]");
+    for (let i = 0; i < arrC.length; i++) {
+        for (let j = i; j < arrC.length; j++) {
+            if (arrC[i] > arrC[j]) {
+                let temp = arrC[j];
+                arrC[j] = arrC[i];
+                arrC[i] = temp;
+            }
+        }
+    }
+
+    document.write("arrC=["+ arrC +"]");
+</script>
+</body>
+</html>

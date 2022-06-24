@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrA = [];
+    let lengthA = prompt("Input length arrA=[]");
+    for (let i = 0; i < lengthA; i++) {
+        arrA[i] = parseInt(prompt("Input value of arrA" + i));
+    }
+    let arrB = [];
+    let lengthB = prompt("Input length arrB=[]");
+    for (let i = 0; i < lengthB; i++) {
+        arrB[i] = parseInt(prompt("Input value of arrB" + i));
+    }
+    alert("arrA = [" + arrA + "]");
+    alert("arrB = [" + arrB + "]");
+    let numberators = arrA[0];
+    let denominator = arrB[0];
+    let max = arrA[0] / arrB[0];
+    let index = 0;
+    for (let i = 0; i < arrA.length; i++) {
+        if (arrA[i] / arrB[i] > max) {
+            max = arrA[i] / arrB[i];
+            numberators = arrA[i];
+            denominator = arrB[i]
+            index = i;
+        }
+    }
+    document.write(numberators + "/" + denominator + "có chỉ số là" + index)
+</script>
+</body>
+</html>
